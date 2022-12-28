@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiberEcommerce", "CiberEcommerce\CiberEcommerce.csproj", "{A2A48095-DD99-4646-A125-B55EC1E6E446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ciber.Application", "Ciber.Application\Ciber.Application.csproj", "{E0CB861A-A8FE-4F21-A32B-8E8EBE3664B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AF908656-496A-41D8-B554-93FAE188B5DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4A1667ED-86E4-4216-B70E-D55A4F4B41B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{14B5795A-BF20-4646-8F34-405DDDCD5787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ciber.Domain", "Ciber.Domain\Ciber.Domain.csproj", "{D58E97D4-A6CA-4EB4-A057-047277C635A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ciber.Persistence", "Ciber.Persistence\Ciber.Persistence.csproj", "{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2A48095-DD99-4646-A125-B55EC1E6E446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A48095-DD99-4646-A125-B55EC1E6E446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A48095-DD99-4646-A125-B55EC1E6E446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A48095-DD99-4646-A125-B55EC1E6E446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0CB861A-A8FE-4F21-A32B-8E8EBE3664B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CB861A-A8FE-4F21-A32B-8E8EBE3664B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CB861A-A8FE-4F21-A32B-8E8EBE3664B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CB861A-A8FE-4F21-A32B-8E8EBE3664B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58E97D4-A6CA-4EB4-A057-047277C635A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58E97D4-A6CA-4EB4-A057-047277C635A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58E97D4-A6CA-4EB4-A057-047277C635A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58E97D4-A6CA-4EB4-A057-047277C635A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A2A48095-DD99-4646-A125-B55EC1E6E446} = {14B5795A-BF20-4646-8F34-405DDDCD5787}
+		{E0CB861A-A8FE-4F21-A32B-8E8EBE3664B3} = {AF908656-496A-41D8-B554-93FAE188B5DF}
+		{D58E97D4-A6CA-4EB4-A057-047277C635A1} = {AF908656-496A-41D8-B554-93FAE188B5DF}
+		{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B} = {4A1667ED-86E4-4216-B70E-D55A4F4B41B2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {955799DC-F378-418A-986C-BC71BFCC8235}
+	EndGlobalSection
+EndGlobal
