@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Ciber.Application\Ciber.Application.csproj" />
     <ProjectReference Include="..\Ciber.Domain\Ciber.Domain.csproj" />
+    <ProjectReference Include="..\Common\Ciber.Common.csproj" />
   </ItemGroup>
 
 </Project>

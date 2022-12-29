@@ -12,5 +12,6 @@ namespace Ciber.Application.Common.Interfaces
 
         DbSet<Order> Orders { get; set; }
         DbSet<Product> Products { get; set; }
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
