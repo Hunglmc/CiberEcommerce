@@ -1,6 +1,7 @@
 ﻿using Ciber.Application.Common.Interfaces;
+using Ciber.Domain.Common;
 using Ciber.Domain.Entities;
-
+using Ciber.Comon;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace Ciber.Persistence
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
-            foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
             {
                 switch (entry.State)
                 {
@@ -48,7 +49,7 @@ namespace Ciber.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(NorthwindDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CiberDbContext).Assembly);
         }
 
 

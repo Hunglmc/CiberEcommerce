@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ciber.Domain", "Ciber.Domai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ciber.Persistence", "Ciber.Persistence\Ciber.Persistence.csproj", "{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiberApplication", "CiberApplication\CiberApplication.csproj", "{C51FBDF3-617E-4703-AC93-C0B1D135F817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiberApplication", "CiberApplication\CiberApplication.csproj", "{C51FBDF3-617E-4703-AC93-C0B1D135F817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{02952EC6-E6EA-4FE4-BB19-5046B7C67CDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{02952EC6-E6EA-4FE4-BB19-5046B7C67CDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ciber.Common", "Common\Ciber.Common.csproj", "{7A6D741D-9D0F-455C-836E-00D05B7F52E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ciber.Common", "Common\Ciber.Common.csproj", "{7A6D741D-9D0F-455C-836E-00D05B7F52E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

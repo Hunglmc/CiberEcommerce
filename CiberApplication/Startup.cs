@@ -1,6 +1,10 @@
-﻿using Ciber.Application.Common.Interfaces;
+﻿using Ciber.Application;
+using Ciber.Application.Common.Interfaces;
 using Ciber.Persistence;
+using CiberApplication.Common;
 using CiberApplication.Services;
+using FluentValidation.AspNetCore;
+using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
 
@@ -35,7 +39,7 @@ namespace CiberApplication
             services
                 .AddControllersWithViews()
                 .AddNewtonsoftJson()
-                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<INorthwindDbContext>());
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ICiberDbContext>());
 
             services.AddRazorPages();
 
@@ -53,7 +57,7 @@ namespace CiberApplication
 
             services.AddOpenApiDocument(configure =>
             {
-                configure.Title = "Northwind Traders API";
+                configure.Title = "Ciber Ecomecre API";
             });
 
             _services = services;
