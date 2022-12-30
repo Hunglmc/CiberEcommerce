@@ -6,7 +6,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Northwind.Application.System.Commands.SeedSampleData
+namespace Ciber.Application.System.Commands.SeedSampleData
 {
     public class SeedSampleDataCommand : IRequest
     {

@@ -1,4 +1,5 @@
 ﻿using Ciber.Application.Common.Interfaces;
+using Ciber.Application.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;

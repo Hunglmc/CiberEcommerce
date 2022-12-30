@@ -1,10 +1,11 @@
 ﻿using Ciber.Application.Common.Interfaces;
+using Ciber.Application.Common.Models;
 using Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Northwind.Infrastructure.Identity
+namespace Ciber.Infrastructure.Identity
 {
     public class UserManagerService : IUserManager
     {
