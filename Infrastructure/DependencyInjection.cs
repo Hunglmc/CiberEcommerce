@@ -11,7 +11,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Northwind.Infrastructure.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +30,7 @@ namespace Infrastructure
 
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("NorthwindDatabase")));
+                options.UseSqlServer(configuration.GetConnectionString("CiberLabDatabase")));
 
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -43,21 +42,21 @@ namespace Infrastructure
                     {
                         options.Clients.Add(new Client
                         {
-                            ClientId = "Northwind.IntegrationTests",
+                            ClientId = "Ciber.IntegrationTests",
                             AllowedGrantTypes = { GrantType.ResourceOwnerPassword },
                             ClientSecrets = { new Secret("secret".Sha256()) },
-                            AllowedScopes = { "Northwind.WebUIAPI", "openid", "profile" }
+                            AllowedScopes = { "", "openid", "profile" }
                         });
                     }).AddTestUsers(new List<TestUser>
                     {
                         new TestUser
                         {
                             SubjectId = "f26da293-02fb-4c90-be75-e4aa51e0bb17",
-                            Username = "jason@northwind",
-                            Password = "Northwind1!",
+                            Username = "tinhoc112bkav@gmail.com",
+                            Password = "testAccount1!",
                             Claims = new List<Claim>
                             {
-                                new Claim(JwtClaimTypes.Email, "jason@northwind")
+                                new Claim(JwtClaimTypes.Email, "tinhoc112bkav@gmail.com")
                             }
                         }
                     });

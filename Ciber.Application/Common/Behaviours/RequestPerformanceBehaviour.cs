@@ -16,7 +16,6 @@ namespace Ciber.Application.Common.Behaviours
         public RequestPerformanceBehaviour(ILogger<TRequest> logger, ICurrentUserService currentUserService)
         {
             _timer = new Stopwatch();
-
             _logger = logger;
             _currentUserService = currentUserService;
         }
@@ -33,7 +32,7 @@ namespace Ciber.Application.Common.Behaviours
             {
                 var name = typeof(TRequest).Name;
 
-                _logger.LogWarning("Ciber Aplication Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@Request}", 
+                _logger.LogWarning(" Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@Request}",
                     name, _timer.ElapsedMilliseconds, _currentUserService.UserId, request);
             }
 

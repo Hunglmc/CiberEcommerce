@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ciber.Common", "Common\Ciber.Common.csproj", "{7A6D741D-9D0F-455C-836E-00D05B7F52E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiberApi", "CiberApi\CiberApi.csproj", "{0DCEA68D-7976-43F4-B373-D9310C8E84A1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{7A6D741D-9D0F-455C-836E-00D05B7F52E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A6D741D-9D0F-455C-836E-00D05B7F52E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A6D741D-9D0F-455C-836E-00D05B7F52E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DCEA68D-7976-43F4-B373-D9310C8E84A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DCEA68D-7976-43F4-B373-D9310C8E84A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DCEA68D-7976-43F4-B373-D9310C8E84A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DCEA68D-7976-43F4-B373-D9310C8E84A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +55,6 @@ Global
 		{C9C4CFF1-3A3C-4523-B67B-67222AA4EA0B} = {4A1667ED-86E4-4216-B70E-D55A4F4B41B2}
 		{02952EC6-E6EA-4FE4-BB19-5046B7C67CDC} = {4A1667ED-86E4-4216-B70E-D55A4F4B41B2}
 		{7A6D741D-9D0F-455C-836E-00D05B7F52E0} = {AF908656-496A-41D8-B554-93FAE188B5DF}
-		{0DCEA68D-7976-43F4-B373-D9310C8E84A1} = {14B5795A-BF20-4646-8F34-405DDDCD5787}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {955799DC-F378-418A-986C-BC71BFCC8235}
