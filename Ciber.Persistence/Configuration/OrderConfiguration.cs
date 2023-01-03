@@ -22,6 +22,7 @@ namespace Ciber.Persistence.Configuration
             builder.Property(e => e.OrderDate).HasColumnType("datetime");
             builder.Property(e => e.OrderAmount).HasDefaultValueSql("((1))");
 
+
         }
     }
 }
