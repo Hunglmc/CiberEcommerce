@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ciber.Application.Common.Behaviours
 {
-    public class RequestPerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-+    where TRequest : IRequest<TResponse>
-
+    public class RequestPerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
         private readonly Stopwatch _timer;
         private readonly ILogger<TRequest> _logger;
