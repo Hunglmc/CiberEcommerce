@@ -1,6 +1,7 @@
 ﻿
 using Ciber.Application.Common.Interfaces;
 using Ciber.Comon;
+using Ciber.Infrastructure.Identity;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Test;
 using IdentityModel;
@@ -35,7 +36,7 @@ namespace Infrastructure
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            if (environment.IsEnvironment("Test"))
+            if (environment.IsEnvironment("Development"))
             {
                 services.AddIdentityServer()
                     .AddApiAuthorization<ApplicationUser, ApplicationDbContext>(options =>
