@@ -2,9 +2,9 @@
 using Ciber.Application.Common.Interfaces;
 using Ciber.Comon;
 using Ciber.Infrastructure.Identity;
-using Duende.IdentityServer.Models;
-using Duende.IdentityServer.Test;
 using IdentityModel;
+using IdentityServer4.Models;
+using IdentityServer4.Test;
 using Infrastructure.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
