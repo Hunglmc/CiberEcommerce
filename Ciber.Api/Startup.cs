@@ -5,6 +5,7 @@ using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
+using FluentValidation.AspNetCore;
 
 namespace Ciber.Api
 {
@@ -36,10 +37,10 @@ namespace Ciber.Api
 
             services.AddHttpContextAccessor();
 
-            //services
-            //    .AddControllersWithViews()
-            //    .AddNewtonsoftJson()
-            //    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<INorthwindDbContext>());
+            services
+                .AddControllersWithViews()
+                .AddNewtonsoftJson()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ICiberDbContext>());
 
             services.AddRazorPages();
 
@@ -76,7 +77,7 @@ namespace Ciber.Api
             }
 
             //app.UseCustomExceptionHandler();
-            app.UseHealthChecks("/health");
+            //app.UseHealthChecks("/health");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseSpaStaticFiles();
