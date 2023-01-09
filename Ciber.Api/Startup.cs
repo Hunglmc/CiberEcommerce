@@ -93,7 +93,7 @@ namespace Ciber.Api
             });
 
             app.UseRouting();
-            app.UseSession();
+
             app.UseAuthentication();
             app.UseIdentityServer();
             app.UseAuthorization();
