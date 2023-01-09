@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
 using FluentValidation.AspNetCore;
+using Ciber.Api.Services;
+using Ciber.Api.Common;
 
 namespace Ciber.Api
 {
@@ -30,10 +32,10 @@ namespace Ciber.Api
             services.AddPersistence(Configuration);
             services.AddApplication();
 
-            //services.AddHealthChecks()
-            //    .AddDbContextCheck<CiberDbContext>();
+            services.AddHealthChecks()
+                    .AddDbContextCheck<CiberDbContext>();
 
-            //services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             services.AddHttpContextAccessor();
 
@@ -50,12 +52,12 @@ namespace Ciber.Api
                 options.SuppressModelStateInvalidFilter = true;
             });
 
-           
 
-            //services.AddOpenApiDocument(configure =>
-            //{
-            //    configure.Title = "Northwind Traders API";
-            //});
+
+            services.AddOpenApiDocument(configure =>
+            {
+                configure.Title = "Ciber API";
+            });
 
             _services = services;
         }
@@ -66,7 +68,7 @@ namespace Ciber.Api
             if (Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseDatabaseErrorPage();
+                app.UseDatabaseErrorPage();
                 RegisteredServicesPage(app);
             }
             else
@@ -76,22 +78,22 @@ namespace Ciber.Api
                 app.UseHsts();
             }
 
-            //app.UseCustomExceptionHandler();
-            //app.UseHealthChecks("/health");
+            app.UseCustomExceptionHandler();
+            app.UseHealthChecks("/health");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            //app.UseSpaStaticFiles();
 
-            //app.UseOpenApi();
 
-            app.UseSwaggerUI(settings =>
+            app.UseOpenApi();
+
+            app.UseSwaggerUi3(settings =>
             {
-                settings.RoutePrefix = "/api";
-                //    settings.DocumentPath = "/api/specification.json";   Enable when NSwag.MSBuild is upgraded to .NET Core 3.0
+                settings.Path = "/api";
+                
             });
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthentication();
             app.UseIdentityServer();
             app.UseAuthorization();
@@ -104,7 +106,7 @@ namespace Ciber.Api
                 endpoints.MapRazorPages();
             });
 
-            
+
         }
 
         private void RegisteredServicesPage(IApplicationBuilder app)
