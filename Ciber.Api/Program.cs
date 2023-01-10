@@ -23,8 +23,8 @@ namespace Ciber.Api
 
                 try
                 {
-                    var northwindContext = services.GetRequiredService<CiberDbContext>();
-                    northwindContext.Database.Migrate();
+                    var CiberContext = services.GetRequiredService<CiberDbContext>();
+                    CiberContext.Database.Migrate();
 
                     var identityContext = services.GetRequiredService<ApplicationDbContext>();
                     identityContext.Database.Migrate();

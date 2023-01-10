@@ -26,6 +26,7 @@ namespace Ciber.Application.System.Commands.SeedSampleData
         {
             await SeedCategoriesAsync(cancellationToken);
         }
+        
 
         private async Task SeedCategoriesAsync(CancellationToken cancellationToken)
         {
